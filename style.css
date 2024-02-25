@@ -51,6 +51,15 @@ h1{
     font-size: 4rem;
     box-shadow: inset;
 }
+h3{
+    font-size: 2.4rem;
+    color: var(--gray-500);
+}
+@media (min-width: 900px){
+    h3{
+        font-size: 3rem;
+    }
+}
 .btn{
     display: block;
     color: var(--light-blue-200);
@@ -118,7 +127,9 @@ h1{
     gap: 1.2rem;
     
 }
-
+.output-encrip-field img{
+    display: none;
+}
 @media (min-width: 900px){
     .sect-main{
         display: grid;
@@ -130,5 +141,8 @@ h1{
         display: flex;
         flex-direction:row;
         row-gap: 1.2rem;
+    }
+    .output-encrip-field img{
+        display:block
     }
 }

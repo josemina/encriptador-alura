@@ -16,18 +16,20 @@
     </header>
     <article class="sect-main">
         <section class="input-encrip">
-            <input class="sect-main-input-field" type="text" placeholder="Ingrese el texto aqui" >
+            <input id="input-field" class="sect-main-input-field" type="text" placeholder="Ingrese el texto aqui" >
             <div>        
                 <p>ℹ Solo letras minúsculas y sin acentos</p>
             </div>
             <div class="input-encrip-btns">
-                <a class="btn btn-primary" href="/">Encriptar</a>
-                <a href="/" class="btn btn-secondary">Desencriptar</a>
+                <a id="encrip-btn" class="btn btn-primary" href="/">Encriptar</a>
+                <a id="desencrip-btn" href="/" class="btn btn-secondary">Desencriptar</a>
             </div>
         </section>
         <section class="output-encrip">
             <div class="output-encrip-field">
-                <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+                <img id="output-img" src="Muñeco.png" alt="">
+                <h3 id="output-title">Ningún mensaje fue encontrado</h3>
+                <p id="output-text">Ingresa el texto que desees encriptar o desencriptar.</p>
             </div>
         </section>
     </article>
