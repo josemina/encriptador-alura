@@ -7,14 +7,19 @@ document.addEventListener("DOMContentLoaded", (e) => {
 	//input.reset();
 	encripBtn.addEventListener("click", (e) => {
 		e.preventDefault();
-		modifyOutput(output, encryp(input.value));
+		if (!verifyText(input.value)) {
+			modifyOutput(output, encryp(input.value));
+		} else {
+			modifyOutput(output, "Solo letras minúsculas y sin acentos");
+		}
 	});
 
 	desEncripBtn.addEventListener("click", (e) => {
 		e.preventDefault();
-		if (output.textContent !== "" && input) {
-			e.preventDefault();
+		if (!verifyText(input.value)) {
 			modifyOutput(output, descryp(input.value));
+		} else {
+			modifyOutput(output, "Solo letras minúsculas y sin acentos");
 		}
 	});
 });
@@ -47,4 +52,9 @@ function modifyOutput(element, value) {
 		p.textContent = value;
 		element.append(p);
 	}
+}
+
+function verifyText(text) {
+	const regex = /[A-ZÁÉÍÓÚÜáéíóú]/g;
+	return regex.test(text);
 }
